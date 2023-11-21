@@ -1,0 +1,198 @@
+
+@api = http://localhost:5000/students
+
+
+### get product
+{{api}}
+
+### get planificacion
+GET http://localhost:5000/renderizarPlanificacion
+
+
+POST http://localhost:5000/enviarPlanificacion
+Content-Type: application/json
+{
+    "FechaInicio": "2023-01-17",
+    "FechaFinal": "2023-05-12",
+    "PeriodoAcademico": "1PAC"
+}
+### add nueva planificacion
+POST http://localhost:5000/enviarPlanificacion
+Content-Type: application/json
+
+{
+    "FechaInicio": "2023-05-22",
+    "FechaFinal": "2023-09-01",
+    "PeriodoAcademico": "2PAC"
+}
+POST http://localhost:5000/enviarMatricula
+Content-Type: application/json
+
+{
+    "FechaInicio": "2023-09-09",
+    "FechaFinal": "2023-09-12",
+    "HoraInicio": "09:00:00",
+    "HoraFinal": "11:59:59",
+    "PeriodoAcademico": "3PAC"
+}
+
+GET http://localhost:5000/enviarPlanificacionIPAC
+
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/enviarClasesQueEstaCursando
+Content-Type: application/json
+
+{
+    "NumCuenta": "20192003632",
+    "Periodo": "2PAC",
+    "año": 2023
+}
+
+
+### ver clases Existencia de evaluacion
+
+post http://localhost:5000/existenciaEvaluacion
+Content-Type: application/json
+
+{
+    "IdEstudiante": "20192003632",
+    "IdDocente": 15198,
+    "IdSeccion": 19
+}
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/subirEvaluacionDocente
+Content-Type: application/json
+
+{
+    "IdSeccion": "21",
+    "IdDocente": 15198,
+    "IdEstudiante":"20182001940",
+    "Pregunta1":5,
+    "Pregunta2":5,
+    "Pregunta3":2,
+    "Pregunta4":"SI",
+    "Pregunta5":"NO",
+    "Observacion":"Ningunac"
+
+}
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/verNotas
+Content-Type: application/json
+
+{
+    "Sistema":"Trimestral",
+    "IdDocente": 15209
+}
+
+
+### get planificacion
+GET http://localhost:5000/enviarSolicitudesRealizadasCoordinador
+
+### get planificacion
+GET http://localhost:5000/carreras
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/download-pdf
+Content-Type: application/json
+
+{
+    "NumCuenta": "20182001940"
+}
+
+### get planificacion
+GET http://localhost:5000/enviarSolicitudesRealizadasCoordinador
+
+### get planificacion
+GET http://localhost:5000/enviarSolicitudesContadas
+
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/obtenerInfoEstudiant
+Content-Type: application/json
+
+{
+    "NumCuenta": "20168003632"
+}
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/dictamenSolicitud
+Content-Type: application/json
+{
+    "NumCuenta": "20191009775",
+    "IdClase":"IS-501",
+    "Estado": "Aprobado",
+}
+
+### ver clases que esta cursando un estudiante
+put http://localhost:5000/dictamenSolicitudEnviar
+Content-Type: application/json
+
+{
+    "numCuenta": "20191009775",
+    "estado": "Pendiente",
+    "idClase":"IS-501"
+}
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/EnviarDictamenCambioCarrera
+Content-Type: application/json
+
+{
+    "numCuenta": "20211006829",
+    "dictamen": "RECHAZADO",
+    "idSolicitud":"13"
+}
+
+### get planificacion
+GET http://localhost:5000/secciones
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/TraerDocentes
+Content-Type: application/json
+
+{
+    "Carrera": "INGENIERIA EN SISTEMAS",
+    "CentroRegional": "CU"
+}
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/TraerClases
+Content-Type: application/json
+
+{
+    "Departamento": "Ingenieria en sistemas"
+}
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/enviarSolicitudesRealizadasCoordinador
+Content-Type: application/json
+
+{
+    "carrera": "Ingenieria industrial",
+    "centroRegional": "VS"
+}
+
+
+### ver clases que esta cursando un estudiante
+delete  http://localhost:5000/eliminarClase
+Content-Type: application/json
+
+{
+    "numCuenta": "20182001940",
+    "periodo": "2PAC",
+    "idClase": "II-222",
+    "año": 2023
+}
+
+
+### ver clases que esta cursando un estudiante
+post http://localhost:5000/ObtenerSolicitudesCambioCarreraCoordinador
+Content-Type: application/json
+
+{
+    "carreraCambio": "Ingenieria industrial",
+    "centroRegional": "CU"
+}
